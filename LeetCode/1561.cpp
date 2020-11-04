@@ -1,4 +1,3 @@
-// https://leetcode.com/problems/maximum-number-of-coins-you-can-get/
 #include <bits/stdc++.h>
 
 #define fi first
@@ -15,19 +14,16 @@ typedef long double ld;
 typedef long long ll;
 typedef string str;
 
-class Solution
-{
-public:
-    int maxCoins(vector<int> &piles)
-    {
+class Solution {
+   public:
+    int maxCoins(vector<int> &piles) {
         sort(all(piles));
         int n = len(piles);
         int i = 0;
         int j = n - 2;
         int k = n - 1;
         int res = 0;
-        while (n > 0)
-        {
+        while (n > 0) {
             res += piles[j];
             ++i;
             j -= 2;
